@@ -32,7 +32,7 @@ var y = d3.scaleLinear()
 var z = d3.scaleOrdinal()
     .range(["#8c7a7c", "#ff7200", "#ffe100", "#ff0000", "#00a36c", "#2e9eb2", "#540699", "#ff00d8", "#8B4513"]);
 
-d3.csv("data.csv", function(d, i, columns) {
+d3.csv("majorityConceptData.csv", function(d, i, columns) {
   for (var i = 1, n = columns.length; i < n; ++i) d[columns[i]] = +d[columns[i]];
   return d;
 }, function(error, data) {
